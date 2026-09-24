@@ -3,7 +3,15 @@ from __future__ import annotations
 from PySide6.QtCore import QTimer, QUrl, Signal
 from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile
 from PySide6.QtWebEngineWidgets import QWebEngineView
-from PySide6.QtWidgets import QDialog, QFrame, QHBoxLayout, QLabel, QLineEdit, QToolButton, QVBoxLayout
+from PySide6.QtWidgets import (
+    QDialog,
+    QFrame,
+    QHBoxLayout,
+    QLabel,
+    QLineEdit,
+    QToolButton,
+    QVBoxLayout,
+)
 
 from hydra.config import DEFAULT_RELOAD_SECONDS
 from hydra.domain.models import PaneConfig

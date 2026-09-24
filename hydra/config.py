@@ -26,76 +26,76 @@ COLORS = {
 
 QSS = f"""
 QWidget {{
-    background: {COLORS['background']};
-    color: {COLORS['text']};
+    background: {COLORS["background"]};
+    color: {COLORS["text"]};
     font-family: "Segoe UI", "Ubuntu", sans-serif;
     font-size: 13px;
 }}
-QMainWindow {{ background: {COLORS['background']}; }}
+QMainWindow {{ background: {COLORS["background"]}; }}
 QFrame#sidebar, QFrame#pane {{
-    background: {COLORS['surface']};
-    border: 1px solid {COLORS['border']};
+    background: {COLORS["surface"]};
+    border: 1px solid {COLORS["border"]};
     border-radius: 10px;
 }}
 QLabel#appTitle {{ font-size: 18px; font-weight: 700; }}
 QLabel#sectionLabel {{
-    color: {COLORS['muted']};
+    color: {COLORS["muted"]};
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
 }}
 QLabel#sessionTitle {{ font-size: 17px; font-weight: 700; }}
 QLabel#paneTitle {{ font-size: 12px; font-weight: 700; }}
-QLabel#paneMeta {{ color: {COLORS['muted']}; font-size: 11px; }}
-QLabel#status {{ color: {COLORS['muted']}; font-size: 12px; }}
+QLabel#paneMeta {{ color: {COLORS["muted"]}; font-size: 11px; }}
+QLabel#status {{ color: {COLORS["muted"]}; font-size: 12px; }}
 QPushButton, QToolButton {{
-    background: {COLORS['surface_alt']};
-    border: 1px solid {COLORS['border']};
+    background: {COLORS["surface_alt"]};
+    border: 1px solid {COLORS["border"]};
     border-radius: 7px;
     padding: 7px 10px;
 }}
-QPushButton:hover, QToolButton:hover {{ background: {COLORS['surface_hover']}; }}
+QPushButton:hover, QToolButton:hover {{ background: {COLORS["surface_hover"]}; }}
 QPushButton:checked, QToolButton:checked {{
-    background: {COLORS['accent']};
+    background: {COLORS["accent"]};
     color: #0f1116;
-    border-color: {COLORS['accent']};
+    border-color: {COLORS["accent"]};
 }}
 QPushButton#primary {{
-    background: {COLORS['accent']};
+    background: {COLORS["accent"]};
     color: #0f1116;
-    border-color: {COLORS['accent']};
+    border-color: {COLORS["accent"]};
     font-weight: 700;
 }}
-QPushButton#primary:hover {{ background: {COLORS['accent_hover']}; }}
-QPushButton#danger {{ color: {COLORS['danger']}; }}
+QPushButton#primary:hover {{ background: {COLORS["accent_hover"]}; }}
+QPushButton#danger {{ color: {COLORS["danger"]}; }}
 QLineEdit, QComboBox, QSpinBox {{
-    background: {COLORS['surface_alt']};
-    border: 1px solid {COLORS['border']};
+    background: {COLORS["surface_alt"]};
+    border: 1px solid {COLORS["border"]};
     border-radius: 7px;
     padding: 6px 8px;
 }}
-QLineEdit:focus, QComboBox:focus, QSpinBox:focus {{ border-color: {COLORS['accent']}; }}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {{ border-color: {COLORS["accent"]}; }}
 QListWidget {{ background: transparent; border: none; outline: none; }}
 QListWidget::item {{
-    background: {COLORS['surface_alt']};
+    background: {COLORS["surface_alt"]};
     border: 1px solid transparent;
     border-radius: 8px;
     padding: 10px;
     margin: 3px 0;
 }}
-QListWidget::item:hover {{ background: {COLORS['surface_hover']}; }}
+QListWidget::item:hover {{ background: {COLORS["surface_hover"]}; }}
 QListWidget::item:selected {{
-    background: {COLORS['surface_hover']};
-    border-color: {COLORS['accent']};
+    background: {COLORS["surface_hover"]};
+    border-color: {COLORS["accent"]};
 }}
-QDialog {{ background: {COLORS['surface']}; }}
+QDialog {{ background: {COLORS["surface"]}; }}
 QDialog QLabel {{ background: transparent; }}
-QStatusBar {{ background: {COLORS['surface']}; color: {COLORS['muted']}; }}
+QStatusBar {{ background: {COLORS["surface"]}; color: {COLORS["muted"]}; }}
 QProgressBar {{
-    background: {COLORS['surface_alt']};
+    background: {COLORS["surface_alt"]};
     border: none;
     border-radius: 3px;
     height: 4px;
 }}
-QProgressBar::chunk {{ background: {COLORS['accent']}; border-radius: 3px; }}
+QProgressBar::chunk {{ background: {COLORS["accent"]}; border-radius: 3px; }}
 """

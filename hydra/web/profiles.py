@@ -26,7 +26,9 @@ class ProfileManager(QObject):
         profile = QWebEngineProfile(self._storage_name(profile_name), self)
         profile.setPersistentStoragePath(str(storage_dir))
         profile.setCachePath(str(storage_dir / "cache"))
-        profile.setPersistentCookiesPolicy(QWebEngineProfile.PersistentCookiesPolicy.ForcePersistentCookies)
+        profile.setPersistentCookiesPolicy(
+            QWebEngineProfile.PersistentCookiesPolicy.ForcePersistentCookies
+        )
         self._persistent[profile_name] = profile
         return profile
 

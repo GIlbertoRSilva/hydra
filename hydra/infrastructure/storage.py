@@ -89,7 +89,9 @@ class SessionStore:
                     id=str(raw_session.get("id", "")) or new_id(),
                 )
             )
-        return HydraState(sessions=sessions, active_session_id=str(data.get("active_session_id", "")))
+        return HydraState(
+            sessions=sessions, active_session_id=str(data.get("active_session_id", ""))
+        )
 
     @staticmethod
     def _safe_int(value: object) -> int:

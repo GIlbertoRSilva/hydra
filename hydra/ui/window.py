@@ -145,7 +145,9 @@ class HydraWindow(QMainWindow):
         self.session_list.clear()
         target_row = 0
         for index, session in enumerate(self.manager.state.sessions):
-            item = QListWidgetItem(f"{session.name}\n{len(session.panes)} painéis · {session.layout}")
+            item = QListWidgetItem(
+                f"{session.name}\n{len(session.panes)} painéis · {session.layout}"
+            )
             item.setData(Qt.ItemDataRole.UserRole, session.id)
             self.session_list.addItem(item)
             if session.id == current_id:
@@ -153,7 +155,9 @@ class HydraWindow(QMainWindow):
         self.session_list.setCurrentRow(target_row)
         self.session_list.blockSignals(False)
 
-    def _session_selected(self, current: QListWidgetItem | None, _previous: QListWidgetItem | None) -> None:
+    def _session_selected(
+        self, current: QListWidgetItem | None, _previous: QListWidgetItem | None
+    ) -> None:
         if current is None:
             return
         session_id = current.data(Qt.ItemDataRole.UserRole)
@@ -231,7 +235,9 @@ class HydraWindow(QMainWindow):
 
     def _refresh_status(self) -> None:
         profiles = {pane.config.profile for pane in self.panes if pane.config.profile}
-        self.status_label.setText(f"{len(self.panes)} painéis · {len(profiles)} perfis persistentes")
+        self.status_label.setText(
+            f"{len(self.panes)} painéis · {len(profiles)} perfis persistentes"
+        )
 
     def _add_pane(self) -> None:
         dialog = PaneEditor(self)
@@ -292,7 +298,7 @@ class HydraWindow(QMainWindow):
         if len(self.manager.state.sessions) <= 1:
             QMessageBox.information(self, "Sessão", "Mantenha pelo menos uma sessão.")
             return
-        answer = QMessageBox.question(self, "Excluir sessão", f"Excluir a sessão \"{session.name}\"?")
+        answer = QMessageBox.question(self, "Excluir sessão", f'Excluir a sessão "{session.name}"?')
         if answer != QMessageBox.StandardButton.Yes:
             return
         self._destroy_panes()

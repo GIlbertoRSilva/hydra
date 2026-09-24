@@ -11,7 +11,7 @@ from PySide6.QtWidgets import (
     QSpinBox,
 )
 
-from hydra.config import DEFAULT_LAYOUT, DEFAULT_RELOAD_SECONDS, LAYOUTS
+from hydra.config import DEFAULT_LAYOUT, LAYOUTS
 from hydra.domain.models import PaneConfig, SessionConfig
 from hydra.domain.validation import normalize_url, validate_layout, validate_profile_name
 
